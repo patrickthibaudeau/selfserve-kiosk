@@ -13,7 +13,7 @@ $CFG->debug = true;
  * YOU CAN MODIFY THESE PARAMETERS
  */
 
-$CFG->wwwroot = 'https://patdev.glendon.yorku.ca/kiosk';
+$CFG->wwwroot = 'http://localhost/kiosk';
 
 /**
  * DO NOT MODIFY BELOW THIS LINE

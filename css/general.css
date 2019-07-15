@@ -1,9 +1,23 @@
-body { 
-    background: url(../images/homepage-1.png) no-repeat center center fixed; 
+/*html tags*/
+body {
+    font-family: 'Overpass', sans-serif;
+    background: url(../images/background.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: #A3B0D2;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/*Custom classes*/
+.bottom-shadow {
+    -webkit-box-shadow: 0 100px 15px -10px black;
+    -moz-box-shadow: 0 100px 15px -10px black;
+    box-shadow: 0 10px 15px -10px black;
 }
 
 .topbar{
@@ -11,15 +25,60 @@ body {
 }
 
 .pageTitle {
-    font-size: 2.0em;
+    /*font-size: 2.0em;*/
     vertical-align:middle;
     max-height: 100px;
 }
 
 .pageSubTitle {
-/*    font-size: .8em;*/
+    font-size: 1.6em;
+    font-weight: bolder;
     text-transform: uppercase;
 }
 .white-bg {
     background-color: #fff;
+}
+
+.col-kiosk {
+    /*    padding-right: 1px;
+        padding-left: 1px;*/
+
+}
+
+.card-kiosk {
+    height: 350px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+}
+
+.icon-large {
+    font-size: 5em;
+}
+
+.kiosk-body {
+    text-align: center;
+    color: #004A8D;    
+}
+
+.kiosk-body > h3 {
+    margin-top: 5px;
+}
+
+
+@media only screen and (max-width: 800px) {    
+    .card-kiosk {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 414px) {    
+    .card-kiosk {
+        height: auto;
+    }
+
+    .icon-large {
+        font-size: 3em;
+    }
+
 }
