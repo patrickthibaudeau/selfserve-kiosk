@@ -1,0 +1,25 @@
+body { 
+    background: url(../images/homepage-1.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.topbar{
+    height: 4.375rem;
+}
+
+.pageTitle {
+    font-size: 2.0em;
+    vertical-align:middle;
+    max-height: 100px;
+}
+
+.pageSubTitle {
+/*    font-size: .8em;*/
+    text-transform: uppercase;
+}
+.white-bg {
+    background-color: #fff;
+}
