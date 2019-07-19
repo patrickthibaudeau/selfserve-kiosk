@@ -1,0 +1,53 @@
+{{> header}}
+{{> navigation}}
+<div class="container mt-3">
+    <div class="row">
+        <div id="atlasContent" class="col-md-12">
+            <div class="card card-kiosk-default">
+                <div class="card-header">
+                    <h3> {{{find_a_person}}}</h3>
+                </div>
+                <div class="card-body">
+                    <h3></h3>
+                    <form id="atlasForm">
+                        <div class="form-group">
+                            <div class="form-label" id="lastName">{{{last_name}}}</div>
+                            <input type="text" class="form-control" id="ln" placeholder="{{{last_name}}}">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label" id="firstName">{{{first_name}}}</div>
+                            <input type="text" class="form-control" id="fn" placeholder="{{{first_name}}}">
+                        </div>
+                        <!--                        <div class="form-group">
+                                                    <div class="form-label" id="emailText">Email</div>
+                                                    <input type="text" class="form-control" id="email" placeholder="Email">
+                                                </div>-->
+                        <input type="hidden" class="form-control" id="email">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="ext">
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="title">
+                        </div>
+                        <div class="form-group">
+                            <!--<input type="text" class="form-control" id="dep" placeholder="Department">-->
+                            <input type="hidden" class="form-control" id="dep">
+                        </div>
+
+                        <button id="btnSubmit" type="button" class="btn btn-primary">{{{submit}}}</button>
+                    </form>
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div id="atlasData"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer_scripts}}
+<script src="js/atlas.js"></script>
+{{> footer}}
+
+

@@ -1,15 +1,27 @@
 {
+    "atlas": "Atlas",
     "academic_services": "les services académiques",
     "academic_services_link_help": "Lien vers les services académiques",
+    "faq": "Demander moi de l'aide",
+    "faq_link_help": "Lien vers la banque de question",
+    "find_a_person": "Répertoire du personelle",
     "finding_a_person": "le répertoire du personelle",
     "finding_a_person_link_help": "Link to finding a page",
     "finding_my_way": "mon chemin",
     "finding_my_way_link_help": "Link to path finding page",
+    "first_name": "Prénom",
     "it_help": "les technologies",
     "it_help_link_help": "Link to technology help",
     "kiosk": "Kiosk",
+    "last_name": "Nom",
     "main_page_title": "Home - Kiosk | Glendon York University",
+    "popular_searches": "Popular articles",
+    "reserve_equipment": "Reserve equipment",
+    "reserve_equipment_link_help": "Link to reserve equipment page (GEO)",
     "self_serve_kiosk": "Self serve kiosk",
-    "slogan": "J'ai besoin d'aide avec ..."
+    "slogan": "J'ai besoin d'aide avec ...",
+    "special_events": "Help with special events",
+    "special_events_link_help": "Link to special events page",
+    "submit": "Soumettre",
+    "technology": "Technologie"
 }
-

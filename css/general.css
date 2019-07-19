@@ -55,6 +55,15 @@ a {
     border-radius: 10px;
 }
 
+.card-kiosk-default {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
 .icon-large {
     font-size: 5em;
 }

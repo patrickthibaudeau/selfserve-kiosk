@@ -6,7 +6,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <span class="pageSubTitle mr-2">{{{slogan}}}</span> <a href="{{{wwwroot}}}/{{{page}}}?lang={{{lang}}}" class="btn btn-lg btn-outline-primary">{{{language}}}</a>
+        {{#pageType}}<span class="pageSubTitle mr-2">{{{slogan}}}</span>{{/pageType}} 
+        {{^pageType}}<span class="mr-2"><a href="{{{wwwroot}}}" class="btn btn-outline-primary btn-lg"><i class="fas fa-home"></i></a></span>{{/pageType}}
+        <a href="{{{wwwroot}}}/{{{page}}}?lang={{{lang}}}" class="btn btn-lg btn-outline-primary">{{{language}}}</a>
     </div>
 </nav>
 

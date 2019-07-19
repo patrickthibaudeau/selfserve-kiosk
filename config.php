@@ -18,7 +18,6 @@ $CFG->wwwroot = 'http://localhost/kiosk';
 /**
  * DO NOT MODIFY BELOW THIS LINE
  */
-
 //Root folder
 $CFG->rootFolder = dirname(__FILE__);
 
@@ -55,6 +54,27 @@ $CFG->defaultParams = [
     'language' => $language,
     'self_serve_kiosk' => getString('self_serve_kiosk'),
     'slogan' => getString('slogan'),
+    'academic_services' => getString('academic_services'),
+    'academic_services_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
+    'academic_services_link_help' => getString('academic_services_link_help'),
+    'faq' => getString('faq'),
+    'faq_link' => $CFG->wwwroot . '/faq.php?lang=' . $CFG->currentLanguage,
+    'faq_link_help' => getString('faq_link_help'),
+    'finding_a_person' => getString('finding_a_person'),
+    'finding_a_person_link' => $CFG->wwwroot . '/atlas.php?lang=' . $CFG->currentLanguage,
+    'finding_a_person_link_help' => getString('finding_a_person_link_help'),
+    'finding_my_way' => getString('finding_my_way'),
+    'finding_my_way_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
+    'finding_my_way_link_help' => getString('finding_my_way_link_help'),
+    'it_help' => getString('it_help'),
+    'it_help_link' => $CFG->wwwroot . '/technology_main.php?lang=' . $CFG->currentLanguage,
+    'it_help_link_help' => getString('it_help_link_help'),
+    'reserve_equipment' => getString('reserve_equipment'),
+    'reserve_equipment_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
+    'reserve_equipment_link_help' => getString('reserve_equipment_link_help'),
+    'special_events' => getString('special_events'),
+    'special_events_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
+    'special_events_link_help' => getString('special_events_link_help'),
 ];
 
 $string = [];
