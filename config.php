@@ -13,7 +13,7 @@ $CFG->debug = true;
  * YOU CAN MODIFY THESE PARAMETERS
  */
 
-$CFG->wwwroot = 'http://localhost/kiosk';
+$CFG->wwwroot = 'https://patdev.glendon.yorku.ca/kiosk';
 
 /**
  * DO NOT MODIFY BELOW THIS LINE
@@ -73,7 +73,7 @@ $CFG->defaultParams = [
     'reserve_equipment_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
     'reserve_equipment_link_help' => getString('reserve_equipment_link_help'),
     'special_events' => getString('special_events'),
-    'special_events_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
+    'special_events_link' => $CFG->wwwroot . '/events.php?lang=' . $CFG->currentLanguage,
     'special_events_link_help' => getString('special_events_link_help'),
 ];
 

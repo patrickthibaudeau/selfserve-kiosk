@@ -25,6 +25,7 @@ $params['faq'] = getString('faq');
 $params['popular_searches'] = getString('popular_searches');
 $params['page'] = 'faq.php';
 $params['submit'] = getString('submit');
+$params['reset'] = getString('reset');
 $params['popular'] = $popular;
 
 echo $template->render($params);

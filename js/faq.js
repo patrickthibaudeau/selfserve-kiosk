@@ -1,35 +1,46 @@
 $(document).ready(function () {
+    init();
+});
+
+function init() {
     $('.answer').hide();
 
-    var login = {faqusername: "webservice", faqpassword: "asdasd"};
-//    $.ajax({
-//        method: 'POST',
-//        url: 'https://patdev.glendon.yorku.ca/faq/api.php?action=login',
-//        data: login,
-//        crossDomain: true,
-//        dataType: 'json',
-//        success: function (results) {
-//            console.log(results);
-//        },
-//        error: function (e) {
-//            console.log(e);
-//        }
-//    });
-
+    $('#btnSubmit').unbind();
     $('#btnSubmit').click(function () {
-        var q = $('#q').val();
-        var lang = $(this).data('lang');
-        lang = 'en';
+        var q = escape($('#q').val());
+        console.log(q);
 
+        var lang = $(this).data('lang');
+
+        var html = '';
+        lang = 'en';
+        console.log(lang);
         //Get faq
         $.ajax({
-            url: 'http://localhost/kiosk/ajax.php?action=search&q=' +  q +
+            url: 'https://patdev.glendon.yorku.ca/faq/api.php?action=search&q=' + q +
                     '&lang=' + lang,
-//            xhrFields: {withCredentials: true},
             crossDomain: true,
             dataType: 'json',
             success: function (results) {
                 console.log(results);
+                html += '<ul class="list-group">';
+                for (i = 0; i < results.length; i++) {
+                    html += '<li class="list-group-item">'
+                            + "<a href='javascript:void(0);' class='openFaq' data-id='"
+                            + results[i].id
+                            + "' data-lang='" + results[i].lang + "'>"
+                            + results[i].question + "</a>"
+                            + "<div class='card answer-" + results[i].id + " answer'>"
+                            + "<div class='card-body'>"
+                            + "<div class='answer-" + results[i].id + "-content'>"
+                            + "</div>"
+                            + "</div>"
+                            + "</div>"
+                            + '</li>';
+                }
+                html += '</ul>';
+                $('#faqData').html(html);
+                init();
             },
             error: function (e) {
                 console.log(e);
@@ -40,22 +51,27 @@ $(document).ready(function () {
     $('.openFaq').click(function () {
         var id = $(this).data('id');
         var lang = $(this).data('lang');
-
         //Get faq
         $.ajax({
-            url: 'http://localhost/kiosk/ajax.php?action=getFaq&id=' + id +
+            url: 'https://patdev.glendon.yorku.ca/faq/api2.php?action=getFaq&recordid=' + id +
                     '&lang=' + lang,
-            xhrFields: {withCredentials: true},
             crossDomain: true,
             dataType: 'json',
             success: function (results) {
-                console.log(results);
+                $('.answer').hide();
+                $('.answer-' + results.id + '-content').html(results.content);
+                $('.answer-' + results.id).show();
+                
             },
             error: function (e) {
                 console.log(e);
             }
         });
     });
-});
 
-
+    $('#btnReset').click(function () {
+        $('#faqData').html('');
+        $('#q').val('');
+        $('.answer').hide();
+    });
+}

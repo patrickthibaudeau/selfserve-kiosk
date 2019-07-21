@@ -14,7 +14,8 @@
                             <input type="text" class="form-control" id="q" placeholder="{{{search}}}">
                         </div>
 
-                        <button id="btnSubmit" type="button" class="btn btn-primary">{{{submit}}}</button>
+                        <button id="btnSubmit" type="button" class="btn btn-outline-primary">{{{submit}}}</button>
+                        <button id="btnReset" type="button" class="btn btn-outline-danger">{{{reset}}}</button>
                     </form>
                     <div class="row mt-3">
                         <div class="col-md-12">
@@ -24,21 +25,21 @@
                     <div class="row mt-3">
                         <div class="col-md-12">
                             <h3>{{{popular_searches}}}</h3>
-                                <div id="popularSearches">
-                                    <ul class="list-group">
-                                        {{#popular}}
-                                        <li class="list-group-item">
-                                            <a href='javascript:void(0);' class='openFaq' data-id='{{id}}' data-lang='{{lang}}'>{{question}}</a>
-                                            <div class='card answer-{{id}} answer'>
-                                                <div class='card-body'>
-                                                    <div class='answer-{{id}}-content'>
-                                                    </div>
+                            <div id="popularSearches">
+                                <ul class="list-group">
+                                    {{#popular}}
+                                    <li class="list-group-item">
+                                        <a href='javascript:void(0);' class='openFaq' data-id='{{id}}' data-lang='{{lang}}'>{{question}}</a>
+                                        <div class='card answer-{{id}} answer'>
+                                            <div class='card-body'>
+                                                <div class='answer-{{id}}-content'>
                                                 </div>
-                                            </div>                                            
-                                        </li>
-                                        {{/popular}}
-                                    </ul>
-                                </div>
+                                            </div>
+                                        </div>                                            
+                                    </li>
+                                    {{/popular}}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

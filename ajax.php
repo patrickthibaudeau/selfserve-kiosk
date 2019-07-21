@@ -5,7 +5,7 @@ $action = $_GET['action'];
 
 switch ($action) {
     case 'getFaq':
-        $id = $_GET['id'];
+        $id = $_GET['recordid'];
         $lang = $_GET['lang'];
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -41,20 +41,6 @@ switch ($action) {
         $response = curl_exec($getFaq);
         curl_close($getFaq);
         echo $response;
-        break;
-    case 'search' :
-        $q = $_GET['q'];
-        $lang = $_GET['lang'];
-        
-        $search = curl_init();
-        curl_setopt_array($search, array(
-            CURLOPT_URL => 'https://patdev.glendon.yorku.ca/faq/api.php?action=search' .
-            '&lang=' . $lang . '&q=' . $q,
-            CURLOPT_RETURNTRANSFER => true,
-        ));
-        $response = curl_exec($search);
-        curl_close($search);
-        echo $response;
-        
+        break;       
 }
 

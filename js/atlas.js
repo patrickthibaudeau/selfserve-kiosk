@@ -71,7 +71,7 @@ function searchAtlas() {
 
                 html += '   <tr>';
                 html += '       <td>';
-                html += '           <h3>' + items[i].givenName + ' ' + items[i].sn + '</h3>' + title + department + '<br>' 
+                html += '           <h3>' + items[i].givenName + ' ' + items[i].sn + '</h3>' + title + department + '<br>'
                         + items[i].serviceprovided.service.campusmailingaddress + '<br>'
                         + items[i].serviceprovided.service.buildingaddress + '<br>'
                         + email + '<br>' + items[i].telephoneNumber;
