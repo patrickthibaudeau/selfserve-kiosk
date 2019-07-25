@@ -6,8 +6,10 @@ $(document).ready(function () {
 
 function searchAtlas() {
     var config = {
-        webServiceUrl: 'https://admin.glendon.yorku.ca/webservice/rest/server.php?',
-        webServiceToken: 'c6edf616d1c5ecc323172c813c21d990',
+//        webServiceUrl: 'https://admin.glendon.yorku.ca/webservice/rest/server.php?',
+//        webServiceToken: 'c6edf616d1c5ecc323172c813c21d990',
+        webServiceUrl: 'https://patdev.glendon.yorku.ca/moodle/webservice/rest/server.php?',
+        webServiceToken: '75c5f9b982531664d5acd47141a3ac6f',
     }
     $('#btnSubmit').append('&nbsp;<i id="searchSpinner" class="fas fa-spinner fa-spin"></i>');
     var lang = getLanguage();
@@ -26,11 +28,12 @@ function searchAtlas() {
         crossDomain: true,
         dataType: 'json',
         success: function (results) {
-            var atlasResults = JSON.parse(b64DecodeUnicode(results[0]['atlas']));
+//            console.log(results);
+            //var atlasResults = JSON.parse(b64DecodeUnicode(results[0]['atlas']));
             console.log(results);
-            var items = atlasResults['results'];
+//            var items = atlasResults['results'];
             var html = '';
-            console.log(items);
+//            console.log(items);
             if (lang == 'en') {
                 html = '<h2>Results</h2>';
             } else {
@@ -45,36 +48,47 @@ function searchAtlas() {
             html += '   </tr>';
             html += '</thead>';
             html += '   <tbody>';
-            for (i = 0; i < items.length; i++) {
+            for (i = 0; i < results.length; i++) {
                 var department = '';
                 var title = '';
-                //Sometimes serviceprovided is not available
-                if (typeof items[i].serviceprovided !== 'undefined') {
-                    if (typeof items[i].serviceprovided.department !== 'undefined') {
-                        department = items[i].serviceprovided.department;
-                    } else {
-                        department = items[i].serviceprovided[0].department + '<br>' + items[i].serviceprovided[1].department;
-                    }
-                    if (typeof items[i].serviceprovided.service !== 'undefined') {
-                        if (typeof items[i].serviceprovided.service.description !== 'undefined') {
-                            title = items[i].serviceprovided.service.description + '<br>';
-                        }
-                    }
-                }
-                if (typeof items[i].preferredemailaddress !== 'undefined') {
-                    var email = items[i].preferredemailaddress;
-                } else {
-                    var email = items[i].mail;
-                }
+                var mailingaddress = '';
+                var phone = '';
+                var email = '';
 
-
+                if (results[i]['description']) {
+                    title = results[i]['description'];
+                }
+                if (results[i]['department']) {
+                    department = results[i]['department'];
+                }
+                if (results[i]['campusmailingaddress']) {
+                    mailingaddress = results[i]['campusmailingaddress'];
+                }
+                if (results[i]['phone']) {
+                    phone = results[i]['phone'];
+                }
+                if (results[i]['mail']) {
+                    email = results[i]['mail'];
+                }
 
                 html += '   <tr>';
                 html += '       <td>';
-                html += '           <h3>' + items[i].givenName + ' ' + items[i].sn + '</h3>' + title + department + '<br>'
-                        + items[i].serviceprovided.service.campusmailingaddress + '<br>'
-                        + items[i].serviceprovided.service.buildingaddress + '<br>'
-                        + email + '<br>' + items[i].telephoneNumber;
+                html += '           <h3>' + results[i]['firstname'] + ' ' + results[i]['lastname'] + '</h3>';
+                if (title) {
+                    html += title;
+                }
+                if (department) {
+                    html += '<br>' + department;
+                }
+                if (mailingaddress) {
+                    html += '<br>' + mailingaddress;
+                }
+                if (email) {
+                    html += '<br>' + email;
+                }
+                if (phone) {
+                    html += '<br>' + phone;
+                }
                 html += '       </td>';
                 html += '   </tr>';
             }

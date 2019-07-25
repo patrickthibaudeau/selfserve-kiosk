@@ -8,6 +8,7 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 $CFG->debug = true;
+$CFG->useJsKeyboard = true;
 
 /*
  * YOU CAN MODIFY THESE PARAMETERS
@@ -50,6 +51,7 @@ if ($CFG->currentLanguage == 'fr') {
 //Default Parameters
 $CFG->defaultParams = [
     'wwwroot' => $CFG->wwwroot,
+    'useJsKeyboard' => $CFG->useJsKeyboard,
     'lang' => $switchLangTo,
     'language' => $language,
     'self_serve_kiosk' => getString('self_serve_kiosk'),
@@ -64,7 +66,7 @@ $CFG->defaultParams = [
     'finding_a_person_link' => $CFG->wwwroot . '/atlas.php?lang=' . $CFG->currentLanguage,
     'finding_a_person_link_help' => getString('finding_a_person_link_help'),
     'finding_my_way' => getString('finding_my_way'),
-    'finding_my_way_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
+    'finding_my_way_link' => $CFG->wwwroot . '/mapwize.php?lang=' . $CFG->currentLanguage,
     'finding_my_way_link_help' => getString('finding_my_way_link_help'),
     'it_help' => getString('it_help'),
     'it_help_link' => $CFG->wwwroot . '/technology_main.php?lang=' . $CFG->currentLanguage,

@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/var/www/html/kiosk/faq.php</file>
-            <file>file:/var/www/html/kiosk/templates/technology_main.mustache</file>
-            <file>file:/var/www/html/kiosk/templates/footer_scripts.mustache</file>
-            <file>file:/var/www/html/kiosk/ajax.php</file>
-            <file>file:/var/www/html/kiosk/js/atlas.js</file>
-            <file>file:/var/www/html/kiosk/lang/fr/kiosk.json</file>
-            <file>file:/var/www/html/kiosk/templates/atlas.mustache</file>
-            <file>file:/var/www/html/kiosk/index.php</file>
-            <file>file:/var/www/html/kiosk/config.php</file>
-            <file>file:/var/www/html/kiosk/lang/en/kiosk.json</file>
-            <file>file:/var/www/html/kiosk/templates/faq.mustache</file>
-            <file>file:/var/www/html/kiosk/js/faq.js</file>
-            <file>file:/var/www/html/kiosk/templates/footer.mustache</file>
-            <file>file:/var/www/html/kiosk/css/general.css</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
