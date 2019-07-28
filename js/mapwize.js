@@ -17,7 +17,7 @@ $(document).ready(function () {
     var room = '';
     var floor = 1; //Default
     var venueObject = '';
-
+    var lang = $('#lang').val();
     /**
      * If there is a value fro place
      */
@@ -67,6 +67,7 @@ $(document).ready(function () {
         mapwizeOptions: {
 //            bounds: [[-79.382100, 43.725437], [-79.374096, 43.731562]],
             userPosition: true,
+            preferredLanguage: lang,
         },
     }).then(map => {
         var thisFloor = map.getFloor();

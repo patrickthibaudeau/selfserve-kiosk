@@ -13,17 +13,17 @@ class LanguageStrings {
 
     public function __construct($lang = 'en', $file = 'kiosk') {
         global $CFG;
-        if (file_exists($CFG->rootFolder . '/lang/' . $lang . '/' . $file . '.json')) {
-            $this->folder = $CFG->rootFolder . '/lang/' . $lang . '/' . $file . '.json';
+        if (file_exists($CFG->rootFolder . '/lang/' . $lang . '/' . $file . '.php')) {
+            $this->folder = $CFG->rootFolder . '/lang/' . $lang . '/' . $file . '.php';
         } else {
-            $this->folder = $CFG->rootFolder . '/lang/en/' . $file . '.json';
+            $this->folder = $CFG->rootFolder . '/lang/en/' . $file . '.php';
         }
     }
 
     public function getString($name) {
-        $string = json_decode(file_get_contents($this->folder));
-//        print_object($string);
-        return $string->$name;
+        $string = [];
+        include($this->folder);
+        return $string["$name"];
     }
 
 }

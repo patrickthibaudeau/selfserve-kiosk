@@ -23,3 +23,7 @@ function print_object($object) {
     print_r($object);
     echo '</pre>';
 }
+
+function currentLanguage() {
+    return $_SESSION["currentLanguage"];
+}
