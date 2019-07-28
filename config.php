@@ -15,6 +15,10 @@ $CFG->useJsKeyboard = true;
  */
 
 $CFG->wwwroot = 'https://patdev.glendon.yorku.ca/kiosk';
+$CFG->courseCalendarHost = 'https://patdev.glendon.yorku.ca/moodle';
+$CFG->courseCalendarToken = '75c5f9b982531664d5acd47141a3ac6f';
+$CFG->faculty = 'GL';
+
 
 /**
  * DO NOT MODIFY BELOW THIS LINE
@@ -65,6 +69,9 @@ $CFG->defaultParams = [
     'finding_a_person' => getString('finding_a_person'),
     'finding_a_person_link' => $CFG->wwwroot . '/atlas.php?lang=' . $CFG->currentLanguage,
     'finding_a_person_link_help' => getString('finding_a_person_link_help'),
+    'finding_course_room' => getString('finding_course_room'),
+    'finding_course_room_link' => $CFG->wwwroot . '/course_calendar.php?lang=' . $CFG->currentLanguage,
+    'finding_course_room_link_help' => getString('finding_course_room_link_help'),
     'finding_my_way' => getString('finding_my_way'),
     'finding_my_way_link' => $CFG->wwwroot . '/mapwize.php?lang=' . $CFG->currentLanguage,
     'finding_my_way_link_help' => getString('finding_my_way_link_help'),

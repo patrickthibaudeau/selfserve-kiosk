@@ -22,6 +22,7 @@ class LanguageStrings {
 
     public function getString($name) {
         $string = json_decode(file_get_contents($this->folder));
+//        print_object($string);
         return $string->$name;
     }
 

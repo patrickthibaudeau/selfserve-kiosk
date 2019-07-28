@@ -4,6 +4,18 @@
 <div class="container mb-5">
     <div class="row mt-3">
         <div class="col-md-4 col-sm-1 col-kiosk mb-2">
+            <a href="{{{finding_course_room_link}}}" title="{{{finding_course_room_link_help}}}">
+                <div class="card card-kiosk">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <div class="kiosk-body">
+                            <i class="fas fa-map-signs icon-large"></i>
+                            <h3>{{{finding_course_room}}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>  
+        <div class="col-md-4 col-sm-1 col-kiosk mb-2">
             <a href="{{{it_help_link}}}" title="{{{it_help_link_help}}}">
                 <div class="card card-kiosk">
                     <div class="card-body d-flex align-items-center justify-content-center">
@@ -27,7 +39,10 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-4 col-sm-1 col-kiosk mb-2">
+        
+    </div>
+    <div class="row mt-3 kiosk-row">
+        <div class="col-md-6 col-sm-1 col-kiosk mb-2">
             <a href="{{{finding_my_way_link}}}" title="{{{finding_my_way_link_help}}}">
                 <div class="card card-kiosk">
                     <div class="card-body d-flex align-items-center justify-content-center">
@@ -38,10 +53,8 @@
                     </div>
                 </div>
             </a>
-        </div>
-    </div>
-    <div class="row mt-3 kiosk-row">
-        <div class="col-md-12 col-sm-12 col-kiosk mb-2">
+        </div>      
+        <div class="col-md-6 col-sm-6 col-kiosk mb-2">
             <a href="{{{finding_a_person_link}}}" title="{{{finding_a_person_link_help}}}">
                 <div class="card card-kiosk">
                     <div class="card-body d-flex align-items-center justify-content-center">
@@ -52,8 +65,7 @@
                     </div>
                 </div>
             </a>
-        </div>
-        
+        </div>        
     </div>
 </div>
 {{> footer_scripts}}
