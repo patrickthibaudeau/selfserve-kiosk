@@ -10,12 +10,15 @@ $popularSearches = json_decode(file_get_contents('https://ithelp.glendon.yorku.c
 $popular = [];
 $i = 0;
 foreach ($popularSearches as $p) {
-    $query = parse_url($p->url, PHP_URL_QUERY);
-    parse_str($query, $params);
-    $popular[$i]['question'] = $p->question;
-    $popular[$i]['id'] = $params['id'];
-    $popular[$i]['lang'] = $params['artlang'];
-    $i++;
+    //Only show top 3
+    if ($i <= 2) {
+        $query = parse_url($p->url, PHP_URL_QUERY);
+        parse_str($query, $params);
+        $popular[$i]['question'] = $p->question;
+        $popular[$i]['id'] = $params['id'];
+        $popular[$i]['lang'] = $params['artlang'];
+        $i++;
+    }
 }
 
 $template = $mustache->loadTemplate('faq');
