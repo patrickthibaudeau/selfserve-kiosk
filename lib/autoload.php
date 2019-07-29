@@ -22,6 +22,18 @@ if (isset($_GET['lang'])) {
     $_SESSION['currentLanguage'] = $CFG->defaultLanguage;
 }
 
+/**
+ * Set privacy mode
+ * If this is a kiosk set to true, users will not have the option
+ * to login. On other devices such as mobile devices, users can
+ * login
+ */
+if (isset($_GET['public'])) {
+    $CFG->public = true;
+} else {
+   $CFG->public = false; 
+}
+
 //Debugging
 if ($CFG->debug) {
     error_reporting(E_ALL);
@@ -70,5 +82,6 @@ $CFG->defaultParams = [
     'special_events' => getString('special_events'),
     'special_events_link' => $CFG->wwwroot . '/events.php?lang=' . $CFG->currentLanguage,
     'special_events_link_help' => getString('special_events_link_help'),
+    'public' => $CFG->public,
 ];
 

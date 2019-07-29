@@ -1,20 +1,6 @@
 $(document).ready(function () {
-    var mobile = isMobile();
-    var useJsKeyboard = $('#useJsKeyboard').val();
-    
-//    Only make the Keyboard work on none mobile devices
-    if (mobile == false && useJsKeyboard == true) {
-        $('input').keyboard({
-            usePreview: false,
-            autoAccept: true,
-            autoAcceptOnEsc: true
-        })
-                // activate the typing extension
-                .addTyping({
-                    showTyping: true,
-                    delay: 250
-                });
-    }
+    document.body.requestFullscreen();
+
 });
 
 
