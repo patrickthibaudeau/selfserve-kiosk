@@ -37,3 +37,21 @@ $string["submit"] = "Soumettre";
 $string["taught_by"] = "Enseigné par";
 $string["technology"] = "La technologie";
 
+
+$string["form_title"] = "Booking of audiovisual divices for a special event";
+$string["email_address"] = "Adresse électronique";
+$string["event_title"] = "Event title";
+$string["event_date"] = "Date de l’événement";
+$string["event_title"] = "Titre de l’événement";
+$string["event_time"] = "Heure de l'événement (Quand l'événement commence-t-il et quand est-il prévu qu’il se termine ? J'y ajouterai le temps d'installation et de désinstallation.)";
+$string["event_date_end"] = "Heure de fin";
+$string["event_location"] = "Lieu de l’événement. Dans quelle salle se tiendra-t-il ?";
+$string["event_person_in_charge"] = "Vous êtes responsable de la réservation de la salle pour l'événement - Avez-vous réservé un espace pour cet événement ?";
+$string["event_budget"] = "Budget - Vous devez fournir un numéro de budget York et le nom du centre de frais. Le matériel est gratuit, mais le travail du technicien vous sera facturé 15 $ de l’heure pour le temps que prendront votre événement et votre installation.";
+$string["event_attendance"] = "Participation attendue";
+$string["25people"] = "de 0 à 25 personnes";
+$string["50people"] = "jusqu’à 50 personnes";
+$string["100people"] = "jusqu’à 100 personnes";
+$string["200people"] = "jusqu’à 200 personnes";
+$string["200peopleplus"] = "plus de 200 personnes";
+$string["event_description "] = "Description de l'événement - quel type de matériel voudriez-vous qu’on vous fournisse ? Si vous laissez ce champ vide, je vous contacterai pour discuter de vos besoins.";

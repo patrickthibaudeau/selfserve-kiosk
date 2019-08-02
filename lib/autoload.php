@@ -83,5 +83,27 @@ $CFG->defaultParams = [
     'special_events_link' => $CFG->wwwroot . '/events.php?lang=' . $CFG->currentLanguage,
     'special_events_link_help' => getString('special_events_link_help'),
     'public' => $CFG->public,
+    'form_title' => getString('form_title'),
+    'email_address' => getString('email_address'),
+    'event_title' => getString('event_title'),
+    'event_date_end' => getString('event_date_end'),
+    'event_location' => getString('event_location'),
+    'event_person_in_charge' => getString('event_person_in_charge'),
+    'event_budget' => getString('event_budget'),
+    'event_attendance' => getString('event_attendance'),
+    '25people' => getString('25people'),
+    '50people' => getString('50people'),
+    '100people' => getString('100people'),
+    '200people' => getString('200people'),
+    '200peopleplus' => getString('200peopleplus'),
+    'event_description' => getString('event_description'),
+
+
+
+
+
+
+
+
 ];
 

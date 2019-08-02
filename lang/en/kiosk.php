@@ -37,3 +37,19 @@ $string["submit"] = "Submit";
 $string["taught_by"] = "Taught by";
 $string["technology"] = "Technology";
 
+$string["form_title"] = "Booking of audiovisual divices for a special event";
+$string["email_address"] = "Email address";
+$string["event_title"] = "Event title";
+$string["event_time"] = "Event time (When does the event actually begin and expect to finish? I will add the extra set-up and tear-down time)";
+$string["event_date_end"] = "Finish time";
+$string["event_location"] = "Event Location - which rooms are you using?";
+$string["event_person_in_charge"] = "You are responsible for booking the room for the event - Have you booked the space for this event?";
+$string["event_budget"] = "Budget - You must provide a York budget number and cost centre. The equipment is free, but you will be charged $15 / hour for the technician, for the duration of your event and set-up.";
+$string["event_attendance"] = "Expected attendance";
+$string["25people"] = "0-25 people";
+$string["50people"] = "up to 50 people";
+$string["100people"] = "up to 100 people";
+$string["200people"] = "up to 200 people";
+$string["200peopleplus"] = "more than 200 people";
+$string["event_description"] = "Event Description - what equipment would you like to have delivered? If you leave this blank I will contact you to discuss your needs.";
+
