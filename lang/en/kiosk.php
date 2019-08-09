@@ -36,7 +36,6 @@ $string["special_events_link_help"] = "Link to special events page";
 $string["submit"] = "Submit";
 $string["taught_by"] = "Taught by";
 $string["technology"] = "Technology";
-
 $string["form_title"] = "Booking of audiovisual divices for a special event";
 $string["email_address"] = "Email address";
 $string["event_title"] = "Event title";
@@ -52,4 +51,9 @@ $string["100people"] = "up to 100 people";
 $string["200people"] = "up to 200 people";
 $string["200peopleplus"] = "more than 200 people";
 $string["event_description"] = "Event Description - what equipment would you like to have delivered? If you leave this blank I will contact you to discuss your needs.";
+$string["event_date"] = "Event date";
+$string["event_date_placeholder"] = "Select a date";
+$string["yes"] = "Yes";
+$string["no"] = "No";
+
 

@@ -36,12 +36,11 @@ $string["special_events_link_help"] = "Liens vers aide aux événements spéciau
 $string["submit"] = "Soumettre";
 $string["taught_by"] = "Enseigné par";
 $string["technology"] = "La technologie";
-
-
-$string["form_title"] = "Booking of audiovisual divices for a special event";
+$string["form_title"] = "Réservation de matériel audiovisuel pour un événement spécial à Glendon";
 $string["email_address"] = "Adresse électronique";
 $string["event_title"] = "Event title";
 $string["event_date"] = "Date de l’événement";
+$string["event_date_placeholder"] = "Sélectionnez une date";
 $string["event_title"] = "Titre de l’événement";
 $string["event_time"] = "Heure de l'événement (Quand l'événement commence-t-il et quand est-il prévu qu’il se termine ? J'y ajouterai le temps d'installation et de désinstallation.)";
 $string["event_date_end"] = "Heure de fin";
@@ -54,4 +53,6 @@ $string["50people"] = "jusqu’à 50 personnes";
 $string["100people"] = "jusqu’à 100 personnes";
 $string["200people"] = "jusqu’à 200 personnes";
 $string["200peopleplus"] = "plus de 200 personnes";
-$string["event_description "] = "Description de l'événement - quel type de matériel voudriez-vous qu’on vous fournisse ? Si vous laissez ce champ vide, je vous contacterai pour discuter de vos besoins.";
+$string["event_description"] = "Description de l'événement - quel type de matériel voudriez-vous qu’on vous fournisse ? Si vous laissez ce champ vide, je vous contacterai pour discuter de vos besoins.";
+$string["yes"] = "Oui";
+$string["no"] = "Non";

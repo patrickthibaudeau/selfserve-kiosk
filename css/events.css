@@ -1,0 +1,32 @@
+.container {
+    margin-top: 40px;
+  }
+
+  h3{
+    margin: auto; 
+ }
+   
+  .card{
+    
+    padding: 20px;
+}
+
+
+
+footer{
+  color: gray;
+  font-size: 15px;
+
+}
+
+.btn-primary{
+ font-size: 25px;
+}
+.star{
+  color: red;
+}
+.radio{
+  color: brown;
+  padding: 10px;
+  margin: 10px;
+}

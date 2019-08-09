@@ -1,5 +1,6 @@
+
 $(document).ready(function () {
-    document.body.requestFullscreen();
+   document.body.requestFullscreen();
 
 });
 
@@ -128,3 +129,5 @@ function getLanguage() {
     }
     return lang;
 }
+
+console.log("hi");

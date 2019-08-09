@@ -1,24 +1,108 @@
 {{> header}}
 {{> navigation}}
+   
 <div class="container mt-3">   
     <div class="row">
         <div class="col-md-12">
             <div class="md-form">
-                <p class="h4 mb-4 text-center"> </p>
-                <input label="Email address *" type="email" id="EmailInput" class="form-control mb-4" placeholder="E-mail">
-                <input label="Nom / Name *" type="text" id="NameInput" class="form-control mb-4" placeholder="Nom complet">
-                <input label="Titre de l’événement / Event title *" type="text" id="EventNameInput" class="form-control mb-4" >
-                <label for="prefill"> </label>
-                <input placeholder="Titre de l’événement / Event title " type="text" id="prefill" class="form-control datepicker" data-value="[2015,6,1]">
-                       
+                <div class="card card-kiosk-default">
+                    <p class="h4 mb-4 text-center"> </p>
+                        <h3> {{{form_title}}} </h3>
+                            <div class="card-body">
+                                <form id="eventsForm">
+                                <div class="form-group">
+                                        <div class="form-label" id="emailAdress">{{{email_address}}} <span class="star"> * </span>  </div>
+                                        <input type="email"  class="form-control" id="emailForm" required >
+                                 </div>
+                                 <div class="form-group"> 
+                                        <div class="form-label" id="name">{{{last_name}}} <span class="star"> * </span>   </div>
+                                        <input type="text" class="form-control" id="nameForm" required>
+                                 </div>
+                                 <div class="form-group"> 
+                                        <div class="form-label" id="evenTitle">{{{event_title}}} <span class="star"> * </span>   </div>
+                                        <input type="text" class="form-control" id="eventtitleForm" required>
+                                  </div>
+                                  <div class="md-from" >
+                                    <div class="form-label"  id="datepicker" >{{{event_date}}} <span class="star"> * </span>   </div>
+                                    <input placeholder={{{event_date_placeholder}}} type="date" id="datepicker" class="form-control" required> 
+                                        
+                                  </div>
+                                        
+                                  <div class="form-group"> 
+                                        <div class="form-label" id="timepickerbegin">{{{event_time}}} <span class="star"> * </span>   </div>
+                                        <input type="time" class="timepicker" id="timepicker" required>
+                                  </div>
+                                   <div class="form-group"> 
+                                        <div class="form-label" id="timepickerend">{{{event_date_end}}}<span class="star"> * </span>  </div>
+                                        <input type="time" class="timepicker" id="timepicker" required>
+                                  </div>
+                                           
+                                  <div class="form-group"> 
+                                        <div class="form-label" id="eventLocation">{{{event_location}}}<span class="star"> * </span>  </div>
+                                        <input type="text" class="form-control" id="eventlocationForm" required >
+                                  </div>
+
+
+                                  <div class="form-group"> 
+                                        <div class="form-label" id="eventpersonincharge">{{{event_person_in_charge}}} <span class="star"> * </span>  </div>
+                                        <select>
+                                        <option value="{{{yes}}}"> {{{yes}}} </option>
+                                        <option value="{{{no}}}">  {{{no}}}  </option>
+                                        </select>
+
+                                        {{! <input type="text" class="form-control" id="eventpersoninchargeForm" required > }}
+                                  </div>
+
+                                  <div class="form-group"> 
+                                        <div class="form-label" id="eventbudget">{{{event_budget}}} <span class="star"> * </span> </div>
+                                        <input type="text" class="form-control" id="eventbudgetForm" required >
+                                  </div>
+
+                                    <div class="form-group"> 
+                                        <div class="form-label" id="eventattendance">{{{event_attendance}}} <span class="star"> * </span> <br/> 
+                                        <input type="checkbox" class="radio" value="0-25" name="0-25"/> {{{25people}}}<br/> 
+                                        <input type="checkbox" class="radio" value="25-50" name="25-50"/> {{{50people}}}<br/> 
+                                        <input type="checkbox" class="radio" value="50-100" name="50-100"/> {{{100people}}}<br/> 
+                                        <input type="checkbox" class="radio" value="100-200" name="100-200"/> {{{200people}}}<br/> 
+                                        <input type="checkbox" class="radio" value="200+" name="200+"/> {{{200peopleplus}}}
+                                  </div>
+
+                                    <div class="form-group"> 
+                                        <div class="form-label" id="eventpersonincharge">{{{event_person_in_charge}}}  <span class="star"> * </span>  </div>
+                                        <input type="text" class="form-control" id="eventpersoninchargeForm" required >
+                                    </div>
+
+                                    <div class="form-group"> 
+                                        <div class="form-label" id="eventdescription">{{{event_description}}} </div>
+                                        <input type="text" class="form-control" id="eventpersoninchargeForm">
+                                   
+                                    </div>
+                                     
+
+
+                                    
+
+                                </form>
+
+                            </div>
+                                <button id="subbutton" type="button" class="btn btn-primary">{{{submit}}}</button>
+                                <footer id="footer"> *A copy of your responses will be emailed to the address you provided. </footer>
+                </div> 
+                
             </div>
-
-
         </div>
     </div>
 </div>
+
 {{> footer_scripts}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/events.js"></script>
 {{> footer}}
+ 
 
-
- <!--Réservation de matériel audiovisuel pour un événement spécial à Glendon / Glendon Special Event AV Booking -->
+ <!--Réservation de matériel audiovisuel pour un événement spécial à Glendon / Glendon Special Event AV Booking 
+ <input label="Email address *" type="email" id="EmailInput" class="form-control mb-4" placeholder="E-mail">
+                <input label="Nom / Name *" type="text" id="NameInput" class="form-control mb-4" placeholder="Nom complet">
+                <input label="Titre de l’événement / Event title *" type="text" id="EventNameInput" class="form-control mb-4" >
+                <label for="prefill"> </label>
+                <input placeholder="Titre de l’événement / Event title " type="text" id="prefill" class="form-control datepicker" data-value="[2015,6,1]">-->

@@ -88,6 +88,7 @@ $CFG->defaultParams = [
     'event_title' => getString('event_title'),
     'event_date_end' => getString('event_date_end'),
     'event_location' => getString('event_location'),
+    'event_date_placeholder' => getString('event_date_placeholder'),
     'event_person_in_charge' => getString('event_person_in_charge'),
     'event_budget' => getString('event_budget'),
     'event_attendance' => getString('event_attendance'),
@@ -97,10 +98,12 @@ $CFG->defaultParams = [
     '200people' => getString('200people'),
     '200peopleplus' => getString('200peopleplus'),
     'event_description' => getString('event_description'),
-
-
-
-
+    'last_name' =>  getString ('last_name'),
+    'event_date' => getString ('event_date'),
+    'event_time' => getString ('event_time'),
+    'submit' => getString('submit'),
+    'no' =>getString('no'),
+    'yes' =>getString('yes'),
 
 
 
