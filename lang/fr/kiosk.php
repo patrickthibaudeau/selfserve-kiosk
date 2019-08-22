@@ -2,6 +2,7 @@
 $string["atlas"] = "Répertoire du personelle";
 $string["academic_services"] = "Services academiques & financiers";
 $string["academic_services_link_help"] = "Lien vers les services academiques & financiers";
+$string["coming_soon"] = "À venir bientôt";
 $string["course_calendar"] = "Calendrier de cours";
 $string["course_name"] = "Cours";
 $string["courses_for"] = "Les cours aujourd'hui";

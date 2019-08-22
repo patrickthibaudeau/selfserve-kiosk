@@ -2,7 +2,6 @@
 
 require_once('config.php');
 
-
 global $CFG;
 
 $url = "$CFG->courseCalendarHost/webservice/rest/server.php?wstoken=$CFG->courseCalendarToken&wsfunction=kioskws_timetable&faculty=$CFG->faculty&moodlewsrestformat=json";
@@ -16,6 +15,7 @@ if ($calendar) {
 $template = $mustache->loadTemplate('course_calendar');
 $params = $CFG->defaultParams;
 $params['pageTitle'] = getString('course_calendar');
+$params['page'] = 'course_calendar.php';
 $params['courses_for'] = getString('courses_for');
 $params['course_name'] = getString('course_name');
 $params['hour_symbol'] = getString('hour_symbol');

@@ -1,5 +1,6 @@
 $(document).ready(function () {
     init();
+    showLinks();
 });
 
 function init() {
@@ -61,7 +62,7 @@ function init() {
                 $('.answer').hide();
                 $('.answer-' + results.id + '-content').html(results.content);
                 $('.answer-' + results.id).show();
-                
+
             },
             error: function (e) {
                 console.log(e);
@@ -74,4 +75,13 @@ function init() {
         $('#q').val('');
         $('.answer').hide();
     });
+}
+
+function showLinks() {
+    if (isPublicKiosk()) {
+        $('.qrcode').hide();
+        $('.QRcode').hide();
+    } else {
+        $('.showLink').hide();
+    }
 }

@@ -1,0 +1,26 @@
+{
+    "name": "Glendon Self-Serve",
+    "icons": [
+        {
+            "src": "/images/icon-36-ldpi.png",
+            "type": "image/png",
+            "sizes": "36x36"
+        },
+        {
+            "src": "/images/icon-48-mdpi.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/images/icon-72-hdpi.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/images/icon-96-xhdpi.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        }
+    ],
+    "start_url": "/index.php?lang=fr"
+}

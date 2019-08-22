@@ -2,6 +2,7 @@
 $string["atlas"] = "Atlas";
 $string["academic_services"] = "Academic & Financial services";
 $string["academic_services_link_help"] = "Link to Academic services";
+$string["coming_soon"] = "Coming soon";
 $string["course_calendar"] = "Course calendar";
 $string["course_name"] = "Course";
 $string["courses_for"] = "Today's courses";
@@ -16,7 +17,7 @@ $string["finding_a_person_link_help"] = "Link to finding a page";
 $string["finding_my_way"] = "Finding my way";
 $string["finding_my_way_link_help"] = "Link to path finding page";
 $string["first_name"] = "First name";
-$string["hour_symbol"] = "] = ";
+$string["hour_symbol"] = ":";
 $string["it_help"] = "Technology";
 $string["it_help_link_help"] = "Link to technology help";
 $string["kiosk"] = "Kiosk";

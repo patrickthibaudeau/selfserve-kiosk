@@ -30,8 +30,10 @@ if (isset($_GET['lang'])) {
  */
 if (isset($_GET['public'])) {
     $CFG->public = true;
+    $_SESSION['public'] = true;
 } else {
-   $CFG->public = false; 
+   $CFG->public = false;
+   $_SESSION['public'] = false;
 }
 
 //Debugging
@@ -55,6 +57,7 @@ $CFG->defaultParams = [
     'useJsKeyboard' => $CFG->useJsKeyboard,
     'lang' => $switchLangTo,
     'language' => $language,
+    'coming_soon' => getString('coming_soon'),
     'currentLanguage' => currentLanguage(),
     'self_serve_kiosk' => getString('self_serve_kiosk'),
     'slogan' => getString('slogan'),
@@ -82,6 +85,6 @@ $CFG->defaultParams = [
     'special_events' => getString('special_events'),
     'special_events_link' => $CFG->wwwroot . '/events.php?lang=' . $CFG->currentLanguage,
     'special_events_link_help' => getString('special_events_link_help'),
-    'public' => $CFG->public,
+    'public' => $_SESSION['public'],
 ];
 

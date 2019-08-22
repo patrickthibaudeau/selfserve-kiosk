@@ -1,5 +1,11 @@
 $(document).ready(function () {
     document.body.requestFullscreen();
+    
+    if (isPublicKiosk()) {
+        $('.qrcode').hide();
+    } else {
+        $('.showLink').hide();
+    }
 
 });
 
@@ -26,6 +32,11 @@ function getUrlVars() {
         vars[hash[0]] = hash[1];
     }
     return vars;
+}
+
+function isPublicKiosk() {
+    var public = $('#isPublic').val();
+    return public;
 }
 
 
