@@ -5,11 +5,13 @@ $(document).ready(function () {
 });
 
 function searchAtlas() {
+    var atlasHost = $('#atlasHost').val();
+    var atlasToken = $('#atlasToken').val();
     var config = {
 //        webServiceUrl: 'https://admin.glendon.yorku.ca/webservice/rest/server.php?',
 //        webServiceToken: 'c6edf616d1c5ecc323172c813c21d990',
-        webServiceUrl: 'https://patdev.glendon.yorku.ca/moodle/webservice/rest/server.php?',
-        webServiceToken: '75c5f9b982531664d5acd47141a3ac6f',
+        webServiceUrl: atlasHost + '/webservice/rest/server.php?',
+        webServiceToken: atlasToken,
     }
     $('#btnSubmit').append('&nbsp;<i id="searchSpinner" class="fas fa-spinner fa-spin"></i>');
     var lang = getLanguage();

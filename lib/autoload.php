@@ -86,5 +86,8 @@ $CFG->defaultParams = [
     'special_events_link' => $CFG->wwwroot . '/events.php?lang=' . $CFG->currentLanguage,
     'special_events_link_help' => getString('special_events_link_help'),
     'public' => $_SESSION['public'],
+    'faqHost' => $CFG->faqHost,
+    'atlasHost' => $CFG->atlasHost,
+    'atlasToken' => $CFG->atlasToken,
 ];
 

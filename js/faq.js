@@ -4,6 +4,8 @@ $(document).ready(function () {
 });
 
 function init() {
+   popupInWindow();
+    var faqHost = $('#faqHost').val();
     $('.answer').hide();
 
     $('#btnSubmit').unbind();
@@ -18,7 +20,7 @@ function init() {
         console.log(lang);
         //Get faq
         $.ajax({
-            url: 'https://patdev.glendon.yorku.ca/faq/api.php?action=search&q=' + q +
+            url: faqHost + '/api.php?action=search&q=' + q +
                     '&lang=' + lang,
             crossDomain: true,
             dataType: 'json',
@@ -54,7 +56,7 @@ function init() {
         var lang = $(this).data('lang');
         //Get faq
         $.ajax({
-            url: 'https://patdev.glendon.yorku.ca/faq/api2.php?action=getFaq&recordid=' + id +
+            url: faqHost + '/api2.php?action=getFaq&recordid=' + id +
                     '&lang=' + lang,
             crossDomain: true,
             dataType: 'json',
@@ -62,7 +64,7 @@ function init() {
                 $('.answer').hide();
                 $('.answer-' + results.id + '-content').html(results.content);
                 $('.answer-' + results.id).show();
-
+                popupInWindow();
             },
             error: function (e) {
                 console.log(e);
@@ -84,4 +86,11 @@ function showLinks() {
     } else {
         $('.showLink').hide();
     }
+}
+
+function popupInWindow() {
+    $('.qrcode').click(function (e) {
+        e.preventDefault();
+        window.open(this.href, 'Kiosk', 'width=1024, height=800', 'menubar=no', 'location=no', 'status=no', 'toolbar=no');
+    });
 }
