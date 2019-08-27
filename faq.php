@@ -30,5 +30,6 @@ $params['page'] = 'faq.php';
 $params['submit'] = getString('submit');
 $params['reset'] = getString('reset');
 $params['popular'] = $popular;
+$params['faq_instructions'] = getString('faq_warning');
 
 echo $template->render($params);

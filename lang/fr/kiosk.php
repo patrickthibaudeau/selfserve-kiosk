@@ -8,6 +8,7 @@ $string["course_name"] = "Cours";
 $string["courses_for"] = "Les cours donnés aujourd'hui";
 $string["faq"] = "Posez-moi une question";
 $string["faq_link_help"] = "Lien vers posez-moi une question";
+$string["faq_warning"] = "Certaines informations trouvées dans la base de connaissances peuvent consister en des liens vers lesquels vous êtes invité à vous connecter. Ne jamais vous connecter en utilisant un kiosque public. Vos informations pourraient être compromises.";
 $string["find_a_person"] = "Trouver une personne";
 $string["finding_a_person"] = "Trouver une personne";
 $string["finding_a_person_link_help"] = "Lien vers trouver une personne";

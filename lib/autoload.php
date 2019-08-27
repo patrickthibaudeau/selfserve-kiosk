@@ -1,4 +1,5 @@
 <?php
+
 require_once("classes/Mustache/Autoloader.php");
 require_once("classes/String.php");
 require_once("lib/helper.php");
@@ -28,12 +29,14 @@ if (isset($_GET['lang'])) {
  * to login. On other devices such as mobile devices, users can
  * login
  */
-if (isset($_GET['public'])) {
-    $CFG->public = true;
-    $_SESSION['public'] = true;
-} else {
-   $CFG->public = false;
-   $_SESSION['public'] = false;
+if ($_SESSION['public'] == false) {
+    if (isset($_GET['public'])) {
+        $CFG->public = true;
+        $_SESSION['public'] = true;
+    } else {
+        $CFG->public = false;
+        $_SESSION['public'] = false;
+    }
 }
 
 //Debugging
