@@ -2,10 +2,10 @@ $(document).ready(function () {
     if (isMobile()) {
         document.body.requestFullscreen();
     }
+
     if (isPublicKiosk()) {
-        $('.qrcode').hide();
-    } else {
-        $('.showLink').hide();
+        console.log(isPublicKiosk());
+        idleTime();
     }
 
 });
@@ -146,4 +146,32 @@ function popupInWindow() {
         e.preventDefault();
         window.open(this.href, 'Kiosk', 'width=800, height=600', 'menubar=no', 'location=no', 'status=no', 'toolbar=no');
     });
+}
+
+function idleTime() {
+    idleTime = 0;
+
+    //Increment the idle time counter every second.
+    var idleInterval = setInterval(timerIncrement, 1000);
+
+    function timerIncrement()
+    {
+        idleTime++;
+        if (idleTime > 60)
+        {
+            goHome();
+        }
+    }
+
+    //Zero the idle timer on mouse movement.
+    $(this).on('click mousemove keypress scroll touchstart', function (e) {
+        idleTime = 0;
+    });
+
+    function goHome()
+    {
+        var home = $('#wwwroot').val();
+;        window.location = home;
+    }
+
 }
