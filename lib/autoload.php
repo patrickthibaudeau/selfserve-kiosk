@@ -58,6 +58,8 @@ if ($CFG->currentLanguage == 'fr') {
 $CFG->defaultParams = [
     'wwwroot' => $CFG->wwwroot,
     'useJsKeyboard' => $CFG->useJsKeyboard,
+    'logged_in' => getString('currently_logged_in'),
+    'log_off' => getString('log_off'),
     'lang' => $switchLangTo,
     'language' => $language,
     'coming_soon' => getString('coming_soon'),

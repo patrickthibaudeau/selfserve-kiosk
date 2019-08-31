@@ -6,6 +6,8 @@ $string["coming_soon"] = "À venir bientôt";
 $string["course_calendar"] = "Calendriers des cours";
 $string["course_name"] = "Cours";
 $string["courses_for"] = "Les cours donnés aujourd'hui";
+$string["currently_logged_in"] = "Remarquer! Vous êtes actuellement authentifié auprès de Passeport York. "
+        . "Vous devez vous déconnecter à ce kiosque. Sinon, votre compte pourrait être suspendu.";
 $string["faq"] = "Posez-moi une question";
 $string["faq_link_help"] = "Lien vers posez-moi une question";
 $string["faq_warning"] = "Certaines informations trouvées dans la base de connaissances peuvent consister en des liens vers lesquels vous êtes invité à vous connecter. Ne jamais vous connecter en utilisant un kiosque public. Vos informations pourraient être compromises.";
@@ -23,6 +25,7 @@ $string["it_help"] = "Technologies";
 $string["it_help_link_help"] = "Lien vers matériel technologique";
 $string["kiosk"] = "Kiosque";
 $string["last_name"] = "Nom";
+$string["log_off"] = "Déconnecter";
 $string["main_page_title"] = "Accueil - Kiosk | Glendon Université York ";
 $string["no_courses"] = "Aucun cours disponible";
 $string["popular_searches"] = "Articles populaires";

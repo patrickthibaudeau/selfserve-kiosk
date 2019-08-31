@@ -2,10 +2,21 @@ $(document).ready(function () {
     if (isMobile()) {
         document.body.requestFullscreen();
     }
+console.log('hello');
+    $('#loginWarning').hide();
 
     if (isPublicKiosk()) {
-        console.log(isPublicKiosk());
+        //Return Kiosk to home page on idle
         idleTime();
+        //Show alert if logged in to PPY 
+        setInterval(function () {
+            var cookie = cookieExists('pyauth');
+            if (cookie) {
+                $('#loginWarning').show();
+            } else {
+                $('#loginWarning').hide();
+            }
+        }, 2000);
     }
 
 });
@@ -144,7 +155,7 @@ function getLanguage() {
 function popupInWindow() {
     $('.qrcode').click(function (e) {
         e.preventDefault();
-        window.open(this.href, 'Kiosk', 'width=800, height=600', 'menubar=no', 'location=no', 'status=no', 'toolbar=no');
+        window.open(this.href, 'Kiosk', 'width=800, height=600', 'menubar=no', 'location=no', 'status=no', 'titlebar=no', 'resizeable=no');
     });
 }
 
@@ -171,7 +182,21 @@ function idleTime() {
     function goHome()
     {
         var home = $('#wwwroot').val();
-;        window.location = home;
+        ;
+        window.location = home;
     }
 
+}
+
+function cookieExists(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ')
+            c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0)
+            return true;
+    }
+    return false;
 }

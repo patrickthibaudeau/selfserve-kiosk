@@ -174,3 +174,10 @@ a {
         margin-top: 0px !important;
     }
 }
+
+.loginWarning {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.4em;
+}

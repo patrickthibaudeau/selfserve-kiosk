@@ -91,6 +91,6 @@ function showLinks() {
 function popupInWindow() {
     $('.qrcode').click(function (e) {
         e.preventDefault();
-        window.open(this.href, 'Kiosk', 'width=1024, height=800', 'menubar=no', 'location=no', 'status=no', 'toolbar=no');
+        window.open(this.href, 'Kiosk', 'width=1024, height=800', 'menubar=no', 'location=no', 'status=no', 'toolbar=no', 'resize=no');
     });
 }
