@@ -1,14 +1,20 @@
 $(document).ready(function () {
+    var path = window.location.pathname;
+    console.log(path);
     if (isMobile()) {
         document.body.requestFullscreen();
     }
-console.log('hello');
+
     $('#loginWarning').hide();
 
     if (isPublicKiosk()) {
         //Return Kiosk to home page on idle
-        idleTime();
+        if (path != '/kiosk/') {
+            console.log('idle time started');
+            idleTime();
+        }
         //Show alert if logged in to PPY 
+
         setInterval(function () {
             var cookie = cookieExists('pyauth');
             if (cookie) {
@@ -17,6 +23,7 @@ console.log('hello');
                 $('#loginWarning').hide();
             }
         }, 2000);
+
     }
 
 });

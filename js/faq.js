@@ -1,6 +1,5 @@
 $(document).ready(function () {
     init();
-    showLinks();
 });
 
 function init() {
