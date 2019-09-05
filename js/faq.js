@@ -7,8 +7,9 @@ function init() {
     var faqHost = $('#faqHost').val();
     $('.answer').hide();
 
-    $('#btnSubmit').unbind();
-    $('#btnSubmit').click(function () {
+    $('#btnSubmit').off();
+    $('#faqForm').on('submit', function (e) {
+        e.preventDefault();
         var q = escape($('#q').val());
         console.log(q);
 
