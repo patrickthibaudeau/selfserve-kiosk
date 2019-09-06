@@ -10,7 +10,7 @@ $string["currently_logged_in"] = "Notice! You are currently authenticated to Pas
         . "You must log out at this Kiosk. Failing to do so could result in your account being suspended.";
 $string["faq"] = "Ask me a question";
 $string["faq_link_help"] = "Link to knowledgebase";
-$string["faq_warning"] = "Some information found in the knowledgebase may consist of links where you are asked to login. Never login while using a public kiosk. Your information could be compromised.";
+$string["faq_warning"] = "Some answers found in the knowledgebase may consist of links. Links will not work within this kiosk. If you want to use the links, you can use your own device.";
 $string["find_a_person"] = "Find a person";
 $string["finding_a_person"] = "Finding a person";
 $string["finding_a_person_link_help"] = "Link to finding a page";

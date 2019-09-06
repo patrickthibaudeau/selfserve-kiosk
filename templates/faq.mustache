@@ -1,5 +1,6 @@
 {{> header}}
 {{> navigation}}
+<input type="hidden" id="currentLanguage" value="{{currentLanguage}}">
 <div class="container mt-3">
     <div class="row">
         <div id="faqContent" class="col-md-12">
@@ -19,7 +20,7 @@
                             <input type="text" class="form-control" id="q" placeholder="{{{search}}}">
                         </div>
 
-                        <button id="btnSubmit" type="submit" class="btn btn-outline-primary">{{{submit}}}</button>
+                        <button id="btnSubmit" type="button" class="btn btn-outline-primary">{{{submit}}}</button>
                         <button id="btnReset" type="button" class="btn btn-outline-danger">{{{reset}}}</button>
                     </form>
                     <div class="row mt-3">
