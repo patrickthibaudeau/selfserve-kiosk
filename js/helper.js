@@ -158,12 +158,7 @@ function getLanguage() {
     return lang;
 }
 
-function popupInWindow() {
-    $('.qrcode').click(function (e) {
-        e.preventDefault();
-        window.open(this.href, 'Kiosk', 'width=800, height=600', 'menubar=no', 'location=no', 'status=no', 'titlebar=no', 'resizeable=no');
-    });
-}
+
 
 function idleTime() {
     idleTime = 0;
