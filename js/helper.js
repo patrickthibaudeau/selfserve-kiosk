@@ -1,32 +1,34 @@
+var path = window.location.pathname;
+if (isPublicKiosk()) {
+    //Return Kiosk to home page on idle
+    if (path != '/kiosk/') {
+        console.log('idle time started');
+        idleTime();
+    }
+    //Show alert if logged in to PPY 
+
+    setInterval(function () {
+        var cookie = cookieExists('pyauth');
+        if (cookie) {
+            $('#loginWarning').show();
+        } else {
+            $('#loginWarning').hide();
+        }
+    }, 50);
+
+}
+
 $(document).ready(function () {
-    var path = window.location.pathname;
+
     if (isMobile()) {
         document.body.requestFullscreen();
     }
 
     $('#loginWarning').hide();
 
-    if (isPublicKiosk()) {
-        //Return Kiosk to home page on idle
-        if (path != '/kiosk/') {
-            console.log('idle time started');
-            idleTime();
-        }
-        //Show alert if logged in to PPY 
 
-        setInterval(function () {
-            var cookie = cookieExists('pyauth');
-            if (cookie) {
-                $('#loginWarning').show();
-            } else {
-                $('#loginWarning').hide();
-            }
-        }, 2000);
-
-    }
 
 });
-
 
 function isMobile() {
     try {

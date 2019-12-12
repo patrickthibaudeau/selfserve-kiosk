@@ -2,6 +2,7 @@
 $string["atlas"] = "Atlas";
 $string["academic_services"] = "Academic & Financial services";
 $string["academic_services_link_help"] = "Link to Academic services";
+$string["academic_faq_link_help"] = "Link to Academic FAQ";
 $string["coming_soon"] = "Coming soon";
 $string["course_calendar"] = "Course calendar";
 $string["course_name"] = "Course";
@@ -29,6 +30,7 @@ $string["log_off"] = "Log off";
 $string["main_page_title"] = "Home - Kiosk | Glendon York University";
 $string["no_courses"] = "No courses available";
 $string["popular_searches"] = "Popular articles";
+$string["qless"] = "Jump in line remotely";
 $string["reserve_equipment"] = "Reserve equipment";
 $string["reserve_equipment_link_help"] = "Link to reserve equipment page (GEO)";
 $string["reset"] = "Reset";

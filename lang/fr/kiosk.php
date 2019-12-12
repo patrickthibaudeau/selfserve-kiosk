@@ -2,6 +2,7 @@
 $string["atlas"] = "Répertoire du personnel";
 $string["academic_services"] = "Services académiques & financiers";
 $string["academic_services_link_help"] = "Lien vers les services académiques & financiers";
+$string["academic_faq_link_help"] = "Lien vers le FAQ academique";
 $string["coming_soon"] = "À venir bientôt";
 $string["course_calendar"] = "Calendriers des cours";
 $string["course_name"] = "Cours";
@@ -29,6 +30,7 @@ $string["log_off"] = "Déconnecter";
 $string["main_page_title"] = "Accueil - Kiosk | Glendon Université York ";
 $string["no_courses"] = "Aucun cours disponible";
 $string["popular_searches"] = "Articles populaires";
+$string["qless"] = "Rejoignez la queue";
 $string["reserve_equipment"] = "Réservez du matériel technologique";
 $string["reserve_equipment_link_help"] = "Lien vers réservez du matériel technologique";
 $string["reset"] = "Réinitialiser";

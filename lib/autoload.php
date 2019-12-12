@@ -69,6 +69,8 @@ $CFG->defaultParams = [
     'academic_services' => getString('academic_services'),
     'academic_services_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
     'academic_services_link_help' => getString('academic_services_link_help'),
+    'cademic_faq_link' => $CFG->wwwroot . '/academic_faq.php?lang=' . $CFG->currentLanguage,
+    'academic_faq_link_help' => getString('academic_faq_link_help'),
     'faq' => getString('faq'),
     'faq_link' => $CFG->wwwroot . '/faq.php?lang=' . $CFG->currentLanguage,
     'faq_link_help' => getString('faq_link_help'),
