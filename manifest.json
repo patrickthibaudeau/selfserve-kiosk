@@ -1,6 +1,7 @@
 {
 
     "name": "Glendon Self-Serve",
+    "short_name": "GSS",
     "display": "fullscreen",
     "icons": [
         {

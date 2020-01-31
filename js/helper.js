@@ -1,4 +1,38 @@
 var path = window.location.pathname;
+
+if (!isPublicKiosk()) {
+    let deferredPrompt;
+    const addBtn = document.querySelector('.add-button');
+    addBtn.style.display = 'none';
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        alert('Before install prompt');
+        console.log(e);
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        // Update UI to notify the user they can add to home screen
+        addBtn.style.display = 'block';
+
+        addBtn.addEventListener('click', (e) => {
+            // hide our user interface that shows our A2HS button
+            addBtn.style.display = 'none';
+            // Show the prompt
+            deferredPrompt.prompt();
+            // Wait for the user to respond to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the A2HS prompt');
+                } else {
+                    console.log('User dismissed the A2HS prompt');
+                }
+                deferredPrompt = null;
+            });
+        });
+    });
+}
+
 if (isPublicKiosk()) {
     //Return Kiosk to home page on idle
     if (path != '/kiosk/') {
@@ -26,6 +60,12 @@ $(document).ready(function () {
 
     $('#loginWarning').hide();
 
+    $('#password').click(function () {
+
+        var strWindowFeatures = "location=no,height=570,width=520,scrollbars=yes,status=no";
+        var URL = "https://mms.yorku.ca";
+        var win = window.open(URL, "_blank", strWindowFeatures);
+    });
 
 
 });
@@ -167,28 +207,29 @@ function idleTime() {
 
     //Increment the idle time counter every second.
     var idleInterval = setInterval(timerIncrement, 1000);
+}
 
-    function timerIncrement()
+function timerIncrement()
+{
+    idleTime++;
+    if (idleTime > 60)
     {
-        idleTime++;
-        if (idleTime > 60)
-        {
-            goHome();
-        }
+        goHome();
     }
+}
 
-    //Zero the idle timer on mouse movement.
-    $(this).on('click mousemove keypress scroll touchstart', function (e) {
-        idleTime = 0;
-    });
+//Zero the idle timer on mouse movement.
+$(this).on('click mousemove keypress scroll touchstart', function (e) {
+    idleTime = 0;
+});
 
-    function goHome()
-    {
-        var home = $('#wwwroot').val();
-        ;
-        window.location = home;
-    }
-
+function goHome()
+{
+    var home = $('#wwwroot').val();
+    //Remove authenticated user cookies;
+    document.cookie = 'pyauth=; path=/; domain=.yorku.ca; expires =Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = 'mayaauth=; path=/; domain=.yorku.ca; expires =Thu, 01 Jan 1970 00:00:01 GMT;';
+    window.location = home;
 }
 
 function cookieExists(name) {
