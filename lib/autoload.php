@@ -29,7 +29,7 @@ if (isset($_GET['lang'])) {
  * to login. On other devices such as mobile devices, users can
  * login
  */
-if ($_SESSION['public'] == false) {
+if (!isset($_SESSION['public'])) {
     if (isset($_GET['public'])) {
         $CFG->public = true;
         $_SESSION['public'] = true;
@@ -54,7 +54,7 @@ if ($CFG->currentLanguage == 'fr') {
     $switchLangTo = 'fr';
 }
 
-if ($CFG->public) {
+if ($_SESSION['public']) {
     $publicQueryString = '&public=1';
 } else {
     $publicQueryString = '';
