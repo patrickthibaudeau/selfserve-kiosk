@@ -54,6 +54,12 @@ if ($CFG->currentLanguage == 'fr') {
     $switchLangTo = 'fr';
 }
 
+if ($CFG->public) {
+    $publicQueryString = '&public=1';
+} else {
+    $publicQueryString = '';
+}
+
 //Default Parameters
 $CFG->defaultParams = [
     'wwwroot' => $CFG->wwwroot,
@@ -67,30 +73,30 @@ $CFG->defaultParams = [
     'self_serve_kiosk' => getString('self_serve_kiosk'),
     'slogan' => getString('slogan'),
     'academic_services' => getString('academic_services'),
-    'academic_services_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
+    'academic_services_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage . $publicQueryString,
     'academic_services_link_help' => getString('academic_services_link_help'),
-    'cademic_faq_link' => $CFG->wwwroot . '/academic_faq.php?lang=' . $CFG->currentLanguage,
+    'academic_faq_link' => $CFG->wwwroot . '/academic_faq.php?lang=' . $CFG->currentLanguage . $publicQueryString,
     'academic_faq_link_help' => getString('academic_faq_link_help'),
     'faq' => getString('faq'),
-    'faq_link' => $CFG->wwwroot . '/faq.php?lang=' . $CFG->currentLanguage,
+    'faq_link' => $CFG->wwwroot . '/faq.php?lang=' . $CFG->currentLanguage . $publicQueryString,
     'faq_link_help' => getString('faq_link_help'),
     'finding_a_person' => getString('finding_a_person'),
-    'finding_a_person_link' => $CFG->wwwroot . '/atlas.php?lang=' . $CFG->currentLanguage,
+    'finding_a_person_link' => $CFG->wwwroot . '/atlas.php?lang=' . $CFG->currentLanguage . $publicQueryString,
     'finding_a_person_link_help' => getString('finding_a_person_link_help'),
     'finding_classroom' => getString('finding_classroom'),
-    'finding_classroom_link' => $CFG->wwwroot . '/course_calendar.php?lang=' . $CFG->currentLanguage,
+    'finding_classroom_link' => $CFG->wwwroot . '/course_calendar.php?lang=' . $CFG->currentLanguage . $publicQueryString,
     'finding_classroom_link_help' => getString('finding_classroom_link_help'),
     'finding_my_way' => getString('finding_my_way'),
-    'finding_my_way_link' => $CFG->wwwroot . '/mapwize.php?lang=' . $CFG->currentLanguage,
+    'finding_my_way_link' => $CFG->wwwroot . '/mapwize.php?lang=' . $CFG->currentLanguage . $publicQueryString,
     'finding_my_way_link_help' => getString('finding_my_way_link_help'),
     'it_help' => getString('it_help'),
-    'it_help_link' => $CFG->wwwroot . '/technology_main.php?lang=' . $CFG->currentLanguage,
+    'it_help_link' => $CFG->wwwroot . '/technology_main.php?lang=' . $CFG->currentLanguage . $publicQueryString,
     'it_help_link_help' => getString('it_help_link_help'),
     'reserve_equipment' => getString('reserve_equipment'),
     'reserve_equipment_link' => $CFG->wwwroot . '/?lang=' . $CFG->currentLanguage,
     'reserve_equipment_link_help' => getString('reserve_equipment_link_help'),
     'special_events' => getString('special_events'),
-    'special_events_link' => $CFG->wwwroot . '/events.php?lang=' . $CFG->currentLanguage,
+    'special_events_link' => $CFG->wwwroot . '/events.php?lang=' . $CFG->currentLanguage . $publicQueryString,
     'special_events_link_help' => getString('special_events_link_help'),
     'public' => $_SESSION['public'],
     'faqHost' => $CFG->faqHost,
